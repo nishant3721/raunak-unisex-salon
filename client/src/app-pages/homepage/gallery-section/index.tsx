@@ -3,49 +3,17 @@ import "./style.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel"
 import Image from "next/image";
+import galleryOne from "@/assets/images/gallery/g1.jpeg"
+import galleryTwo from "@/assets/images/gallery/g2.jpeg"
+import galleryThree from "@/assets/images/gallery/g3.jpeg"
+import galleryFour from "@/assets/images/gallery/g4.jpeg"
+import galleryFive from "@/assets/images/gallery/g5.jpeg"
+import gallerySix from "@/assets/images/gallery/g6.jpeg"
 
 const Index = () => {
-    const _gridContentArray = [
-        {
-            name: "Sales & Marketing",
-            price: 0,
-            border: "border-b-[1px] border-e-[1px]",
-        },
-        {
-            name: "HR",
-            price: 0,
-            border: "border-b-[1px] border-e-[1px]",
-        },
-        {
-            name: "Fresher",
-            price: 0,
-            border: "border-b-[1px] border-e-[1px]",
-        },
-        {
-            name: "Technical",
-            price: 0,
-            border: "border-b-[1px]",
-        },
-        {
-            name: "Accounts",
-            price: 0,
-            border: "border-e-[1px]",
-        },
-        {
-            name: "Software Engineer",
-            price: 0,
-            border: "border-e-[1px]",
-        },
-        {
-            name: "Production/QA/QC",
-            price: 0,
-            border: "border-e-[1px]",
-        },
-        {
-            name: "Backend",
-            price: 0,
-        },
-    ];
+    const _galleryArray = [
+        { "id": 1, "images": [galleryOne, galleryTwo, galleryThree, galleryFour, galleryFour, galleryFive, gallerySix] },
+    ]
 
     return (
         <section
@@ -61,46 +29,27 @@ const Index = () => {
                 interval={2000}
                 className="mt-10"
             >
-                {[1, 2, 3, 4, 5].map((item, index) => (
+                {_galleryArray.map((item, index) => (
                     <div key={index} className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="" />
+                            <Image className="h-auto max-w-full rounded-lg" src={item.images[0] as any} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="" />
+                            <Image className="h-auto max-w-full rounded-lg" src={item.images[1] as any} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="" />
+                            <Image className="h-auto max-w-full rounded-lg" src={item.images[2] as any} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="" />
+                            <Image className="h-auto max-w-full rounded-lg" src={item.images[3] as any} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="" />
+                            <Image className="h-auto max-w-full rounded-lg" src={item.images[4] as any} alt="" />
                         </div>
                         <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="" />
+                            <Image className="h-auto max-w-full rounded-lg" src={item.images[5] as any} alt="" />
                         </div>
                     </div>
-
                 ))}
             </Carousel>
         </section>

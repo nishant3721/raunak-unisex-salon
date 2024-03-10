@@ -4,43 +4,43 @@ import "./style.css";
 const Index = () => {
     const _gridContentArray = [
         {
-            name: "Sales & Marketing",
-            price: 0,
+            name: "Keratin smoothening",
+            price: "2499/-",
             border: "border-b-[1px] border-e-[1px]",
         },
         {
-            name: "HR",
-            price: 0,
+            name: "B Tox Hair Treatment",
+            price: "3999/-",
             border: "border-b-[1px] border-e-[1px]",
         },
         {
-            name: "Fresher",
-            price: 0,
+            name: "Sign Bond",
+            price: "2499/-",
             border: "border-b-[1px] border-e-[1px]",
         },
         {
-            name: "Technical",
-            price: 0,
+            name: "Highlights",
+            price: "1499/-",
             border: "border-b-[1px]",
         },
         {
-            name: "Accounts",
-            price: 0,
+            name: "Moisture Therapy",
+            price: "2999/-",
             border: "border-e-[1px]",
         },
         {
-            name: "Software Engineer",
-            price: 0,
+            name: "Hair Color Global",
+            price: "1999/-",
             border: "border-e-[1px]",
         },
         {
-            name: "Production/QA/QC",
-            price: 0,
+            name: "Smoothening Matrix",
+            price: "1999/-",
             border: "border-e-[1px]",
         },
         {
-            name: "Backend",
-            price: 0,
+            name: "smoothening Loreal",
+            price: "2499/-",
         },
     ];
 
